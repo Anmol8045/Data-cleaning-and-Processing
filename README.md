@@ -60,6 +60,7 @@ df = pd.get_dummies(df, columns=['category_column'])
 
 🔹 Step 4: Normalize or Standardize Features
 Why?
+
 Many ML algorithms perform better when features are on a similar scale.
 
 python
@@ -72,6 +73,7 @@ scaler = StandardScaler()
 df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
 
 🔹 Step 5: Remove Outliers
+
 Use statistical methods or visualizations (e.g., IQR method, Z-score, boxplots).
 
 python
@@ -95,6 +97,7 @@ df['year'] = pd.to_datetime(df['date_column']).dt.year
 
 
 🔹 Step 7: Split the Data
+
 Split the dataset into training and testing (or validation) sets.
 
 python
@@ -109,6 +112,7 @@ y = df['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 Tools to Explore:
+
 Pandas & NumPy – Data manipulation
 
 Scikit-learn – Preprocessing and modeling
