@@ -35,6 +35,8 @@ df.dropna(inplace=True)
 
 # Fill missing numeric with mean
 df['column'] = df['column'].fillna(df['column'].mean())
+
+
 🔹 Step 3: Handle Categorical Data
 Convert categorical variables into numbers
 Label Encoding (for ordinal categories)
@@ -46,6 +48,7 @@ Copy
 Edit
 # One-hot encoding
 df = pd.get_dummies(df, columns=['category_column'])
+
 🔹 Step 4: Normalize or Standardize Features
 Why?
 Many ML algorithms perform better when features are on a similar scale.
@@ -57,6 +60,7 @@ from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+
 🔹 Step 5: Remove Outliers
 Use statistical methods or visualizations (e.g., IQR method, Z-score, boxplots).
 
