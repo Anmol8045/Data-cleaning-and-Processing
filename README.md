@@ -66,6 +66,8 @@ Edit
 from scipy import stats
 
 df = df[(np.abs(stats.zscore(df.select_dtypes(include='number'))) < 3).all(axis=1)]
+
+
 🔹 Step 6: Feature Engineering
 Create new features from existing data that might help your model.
 
