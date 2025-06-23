@@ -77,6 +77,8 @@ python
 Copy
 Edit
 df['year'] = pd.to_datetime(df['date_column']).dt.year
+
+
 🔹 Step 7: Split the Data
 Split the dataset into training and testing (or validation) sets.
 
