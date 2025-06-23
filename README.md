@@ -2,6 +2,7 @@
 
  Step 1: Understand Your Data
 Load and Inspect the Data
+
 Use tools like pandas to load and inspect your dataset.
 
 python
@@ -10,9 +11,13 @@ Edit
 import pandas as pd
 
 df = pd.read_csv('your_data.csv')
+
 print(df.head())
+
 print(df.info())
+
 Key things to check:
+
 Data types (numeric, categorical, etc.)
 
 Missing values
@@ -32,13 +37,16 @@ python
 Copy
 Edit
 # Drop missing rows
+
 df.dropna(inplace=True)
 
 # Fill missing numeric with mean
+
 df['column'] = df['column'].fillna(df['column'].mean())
 
 
 🔹 Step 3: Handle Categorical Data
+
 Convert categorical variables into numbers
 Label Encoding (for ordinal categories)
 
@@ -75,6 +83,7 @@ df = df[(np.abs(stats.zscore(df.select_dtypes(include='number'))) < 3).all(axis=
 
 
 🔹 Step 6: Feature Engineering
+
 Create new features from existing data that might help your model.
 
 Example: Extracting year from a date column:
