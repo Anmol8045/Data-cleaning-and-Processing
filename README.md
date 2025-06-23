@@ -22,6 +22,7 @@ Inconsistent formatting
 Outliers or anomalies
 
 🔹 Step 2: Handle Missing Values
+
 Common strategies:
 Remove rows/columns with too many missing values
 
@@ -59,6 +60,7 @@ Edit
 from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
+
 df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
 
 🔹 Step 5: Remove Outliers
@@ -92,9 +94,11 @@ Edit
 from sklearn.model_selection import train_test_split
 
 X = df.drop('target', axis=1)
+
 y = df['target']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 Tools to Explore:
 Pandas & NumPy – Data manipulation
 
